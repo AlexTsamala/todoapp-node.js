@@ -1,0 +1,22 @@
+{
+  "name": "todo-app-node",
+  "version": "1.0.0",
+  "description": "Todo Application",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "author": "AlexTsamala",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
