@@ -55,6 +55,16 @@ app.post("/", async (request,response,next)=>{
     return response.status(200).send("Task added successfully")
 })
 
+app.put("/change-status/:id", async (request,response,next)=>{
+    const {id} = request.params;
+    const {status} = request.body;
+    const client = await pool.connect();
+    const result = await client.query({
+        text:`UPDATE todoapp SET status=${!status} WHERE id=${+id};`,
+    })
+    return response.status(200).send("status was changed successfully")
+ })
+
 app.listen(4001,()=>{
     console.log("started server on 4001 port")
 })
