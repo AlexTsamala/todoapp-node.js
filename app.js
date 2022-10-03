@@ -15,7 +15,8 @@ const pool = new Pool({
     'host':'localhost',
     'database':'todoapp',
     'password':'Bayern1860',
-    'port':5432
+    'port':5432,
+    idleTimeoutMillis: 0,
 }) 
 
 app.delete("/delete-todo/:id", async (request,response,next)=>{
